@@ -6,6 +6,10 @@ if(isset($_POST['email'])){
     $text = $_POST['text'];
     $to = "way2up.armenia@gmail.com";
     $subject = 'Way2Up message';
+    $headers = 'From:info@way2up.am'. "\r\n" .
+               'Reply-To:info@way2up.am'. "\r\n" .
+               'X-Mailer: PHP/' . phpversion();
+
     $body = <<<EMAIL
 
     Hi Way2Up team!
@@ -21,7 +25,7 @@ if(isset($_POST['email'])){
     Kind Regards
 EMAIL;
 
-    if(mail($to, $subject, $body)){
+    if(mail($to, $subject, $body, $headers)){
         echo true;
     }else{
         echo false;
