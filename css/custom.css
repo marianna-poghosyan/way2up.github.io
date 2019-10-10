@@ -293,6 +293,14 @@ button {
     width: 1em;
     margin-left: -1em;
 }
+.chevron li::before {
+    content: "";
+    background-image: url(../images/chevron12.png);
+    background-size: 15px 15px;
+    display: inline-block;
+    width: 15px;
+    height: 13px;
+}
 .career-image{
     width: 360px;
     height: 360px;
