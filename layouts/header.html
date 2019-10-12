@@ -72,15 +72,8 @@
 <script>
     $.getScript("js/push_nav.js");
     var path = window.location.pathname;
-    var page = path.substr(
-        path.lastIndexOf("/") + 1,
-        path.lastIndexOf(".")
-    ) + ".html";
     $("#accordion>li").removeClass("active");
-    page = window.location.search === '?type=own' ? 'projects.html?type=own' : page;
-    console.log(page);
-    var page1 = path.substr(1) + ".html";
-    console.log(page1);
+    var page = window.location.search === '?type=own' ? 'projects.html?type=own' : path.substr(1) + ".html";
     $('#accordion>li>a[href="'+page+'"]').parent().addClass("active");
     var ios = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
     if (ios && is_touch_device()) {
