@@ -38,7 +38,12 @@ $(window).on('load', function () {
     // });
     $(window).scroll(function(){
         if($(window).scrollTop() + $(window).height() === $(document).height()) {
-            console.log("bottom!");
+            // console.log("bottom!");
+        }
+        if($(window).scrollTop() < 100) {
+            $(".scroll-top-arrow").addClass("goDown")
+        } else {
+            $(".scroll-top-arrow").removeClass("goDown")
         }
     });
 
@@ -663,7 +668,6 @@ $("#contact-form").on("submit", function (e) {
         url:"mail.php",
         data: data,
         success: function(res) {
-            console.log(res);
             if (res == true) {
                 $("#contact-form")[0].reset()
                 $('#email').val('Thank you!');
@@ -672,7 +676,6 @@ $("#contact-form").on("submit", function (e) {
             }
         },
         error: function (err) {
-            console.log(err);
             alert('Sorry, please try again');
         }
     });

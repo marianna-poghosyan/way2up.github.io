@@ -55,16 +55,17 @@ section {
     top: calc(100vh - 40px);
 }
 .scroll-top-arrow, .scroll-top-arrow:focus {
-    top: 120px;
+    top: 25px;
     font-size: 40px;
     height: 45px;
     width: 45px;
     right: 25px;
+    transition: top .5s;
 }
 /*Scroll*/
 /* width */
 ::-webkit-scrollbar {
-    width: 6px;
+    width: 4px;
 }
 /* Track */
 ::-webkit-scrollbar-track {
@@ -133,6 +134,18 @@ button {
 /*Background*/
 .about-cover{
     background-size: cover;
+}
+.counter-two-icon{
+    color: gray;
+}
+.counter-two-block{
+    height: auto;
+}
+#services img{
+    width: 400px;
+}
+.team-quote{
+    line-height: 3.5rem;
 }
 .service-cover{
     background: url(../images/cover-service.jpg) center;
@@ -256,6 +269,7 @@ button {
 }
 .team-box .team-image{
     border-radius: 5px;
+    border: 3px solid #f2f2f2;
 }
 .team-two-social{
     right: 10px;
@@ -264,7 +278,8 @@ button {
 .team-two-tag{
     border-radius: 5px;
     padding: 10px;
-    padding-bottom: 20px;
+    bottom: 5%;
+    font-variant: petite-caps;
 }
 
 .portfolio .item-img-overlay .viewProject {
@@ -292,6 +307,14 @@ button {
     display: inline-block;
     width: 1em;
     margin-left: -1em;
+}
+.chevron li::before {
+    content: "";
+    background-image: url(../images/chevron-right.png);
+    background-size: 15px 15px;
+    display: inline-block;
+    width: 15px;
+    height: 13px;
 }
 .career-image{
     width: 360px;

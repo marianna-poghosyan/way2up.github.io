@@ -16,6 +16,7 @@ echo json_encode([
     "linesOfCode" => $linesOfCode,
     "timeOfFun" => $timeOfFun,
     "happyClients" => 34,
-    "teamMembers" => 7
+    "teamMembers" => 7,
+    "coffeesConsumed" => 112358,
 ]);
 

@@ -770,6 +770,7 @@ Google Font
     max-width:100%;
     margin: 0 auto;
     background-size: cover !important;
+    padding: 25px 0;
 }
 
 .counter-two-icon{
@@ -3879,3 +3880,13 @@ header.ios nav.nav-box-width {
     }
 }
 
+@media only screen and (max-width: 1091px) and (min-width: 992px) {
+    .goDown {
+        top: 125px !important;
+    }
+}
+@media only screen and (max-width: 1291px) and (min-width: 1200px) {
+    .goDown {
+        top: 125px !important;
+    }
+}
