@@ -60,6 +60,7 @@ section {
     height: 45px;
     width: 45px;
     right: 25px;
+    transition: top .5s;
 }
 /*Scroll*/
 /* width */
