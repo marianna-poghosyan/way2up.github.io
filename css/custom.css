@@ -14,7 +14,7 @@ a:hover, a:active {
     top: calc(100vh - 60px);
 }
 .ios .navbar-fixed-top {
-    top: calc(100vh - 120px);
+    top: calc(100vh - 120px) !important;
 }
 nav.navbar.navbar-default ul.nav > li > a {
     padding: 20px 0;
