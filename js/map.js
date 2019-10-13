@@ -5,8 +5,8 @@ jQuery(function(e) {
 				zoom: 15,
 				draggable: !0,
 				scrollwheel: !1,
-				animation: google.maps.Animation.DROP,
-				mapTypeId: google.maps.MapTypeId.ROADMAP,
+				// animation: google.maps.Animation.DROP,
+				// mapTypeId: google.maps.MapTypeId.ROADMAP,
 				center: new google.maps.LatLng(40.1894954,44.5212747),
 				// styles: [{
 				// 	elementType: "geometry",
