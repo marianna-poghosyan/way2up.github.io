@@ -169,6 +169,7 @@ jQuery(function(e) {
 			icon: s[l][3]
 		}), google.maps.event.addListener(e, "click", function(e, l) {
 			return function() {
+				console.log(123);
 				a.setContent(s[l][0]), a.open(r, e)
 			}
 		}(e, l))
