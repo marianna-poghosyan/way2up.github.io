@@ -26,9 +26,10 @@ nav.navbar.navbar-default ul.nav > li > a {
 .outer-nav a {
     font-weight: 500;
 }
-
-header nav.navbar .navbar-nav > li > a:hover, nav.navbar.bootsnav ul.nav > li > a:hover, .header-search-form:hover{
-
+header {
+    padding-bottom: env(safe-area-inset-bottom);
+}
+header nav.navbar .navbar-nav > li > a:hover, nav.navbar.bootsnav ul.nav > li > a:hover, .header-search-form:hover {
     color: rgb(203, 52, 43);
     -webkit-transition: all 0.5s cubic-bezier(0, 0, 0.2, 1);
     -o-transition: all 0.5s cubic-bezier(0, 0, 0.2, 1);
