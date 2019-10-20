@@ -616,6 +616,15 @@ $songs = array(
     612 => 'https://www.youtube.com/watch?v=pt8VYOfr8To?autoplay=1',
     613 => 'https://www.youtube.com/watch?v=57Ykv1D0qEE?autoplay=1',
     614 => 'https://www.youtube.com/watch?v=xdmktWgZPn8?autoplay=1',
+    615 => 'https://youtu.be/RShx0VJ4FLg',
+    616 => 'https://youtu.be/n0TiZguuv68',
+    617 => 'https://youtu.be/ulF5ZuVIIt4',
+    618 => 'https://youtu.be/OGl5V5ZNya0',
+    619 => 'https://youtu.be/NYGn7b4N5nY',
+    620 => 'https://youtu.be/o8wpucx7W8M',
+    621 => 'https://youtu.be/D1dbq37B32s',
+    622 => 'https://youtu.be/Oguq9Ps8Bxs',
+    622 => 'https://youtu.be/qrfdFncm2qQ',
 );
 
-echo $songs[rand(0, 614)];
+echo $songs[rand(0, 622)];
