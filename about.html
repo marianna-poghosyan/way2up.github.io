@@ -377,6 +377,8 @@
 		type:"post",
 		url:"achievements.php",
 		success: function(res) {
+			console.log(JSON.parse(res));
+			alert(JSON.parse(res));
 			var hours = JSON.parse(res);
 			var hours1 = Math.floor(hours["workedHours"]);
 			var minutes1 = Math.floor(hours["workedHours"] % 60);
