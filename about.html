@@ -377,8 +377,6 @@
 		type:"post",
 		url:"achievements.php",
 		success: function(res) {
-			console.log(JSON.parse(res));
-			alert(JSON.parse(res));
 			var hours = JSON.parse(res);
 			var hours1 = Math.floor(hours["workedHours"]);
 			var minutes1 = Math.floor(hours["workedHours"] % 60);
@@ -388,11 +386,11 @@
 			var minutes3 = Math.floor(hours["timeOfFun"] % 60);
 			var timeOfFun = hours3 + ":" + minutes3;
 			$("#workedHours").text(workedHours);
-			$("#linesOfCode .count").text(linesOfCode);
+			$("#linesOfCode").text(linesOfCode);
 			$("#timeOfFun").text(timeOfFun);
-			$("#happyClients .count").text(hours["happyClients"]);
-			$("#teamMembers .count").text(hours["teamMembers"]);
-			$("#coffeesConsumed .count").text(Math.floor(hours1 * 0.35));
+			$("#happyClients").text(hours["happyClients"]);
+			$("#teamMembers").text(hours["teamMembers"]);
+			$("#coffeesConsumed").text(Math.floor(hours1 * 0.35));
 		}
 	});
 </script>
