@@ -1195,7 +1195,7 @@ Google Font
 }
 
 .footer-nav a {
-    margin: 5px;
+    margin: 5px 0 5px 5px;
 }
 footer a:hover, footer a:active, footer a:focus{
     text-decoration: none;
