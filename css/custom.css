@@ -345,7 +345,8 @@ button {
 }
 @media (max-width: 1024px){
     .navbar-fixed-top {
-        top: calc(100vh - 54px);
+        top: calc(100% - 54px);
+        /* height: 100%; */
     }
 }
 @media (max-width: 768px){
@@ -368,7 +369,7 @@ button {
 
 @media screen and (max-width: 768px) {
     .showMenuButton-two {
-        top: calc(100vh - 44px) !important;
+        top: calc(100% - 44px) !important;
     }
     #particles-js {
         height: 400px;
