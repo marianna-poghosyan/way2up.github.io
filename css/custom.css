@@ -353,8 +353,12 @@ button {
         height: 120px !important;
     }
 
+    .contact-page-form .contact-form > #contact-form {
+        text-align: center;
+    }
+
     .contact-page-form .contact-form > #contact-form > .btn {
-        float: left !important;
+        float: none !important;
     }
 }
 
