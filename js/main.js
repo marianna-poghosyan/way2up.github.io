@@ -666,7 +666,7 @@ jQuery(function ($) {
 
     // Filter special characters in Name Input
     function preventNameXss (str) {
-        return str.replace(/[^a-zA-Z0-9]/g, '');
+        return str.replace(/[^a-zA-ZԱ-Ֆա-ֆА-Яа-я0-9]/g, '');
     }
 
     // Filter special characters in text area
