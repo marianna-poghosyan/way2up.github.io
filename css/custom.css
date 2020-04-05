@@ -349,7 +349,13 @@ button {
     }
 }
 @media (max-width: 768px){
+    .contact-page-form .contact-form textarea  {
+        height: 120px !important;
+    }
 
+    .contact-page-form .contact-form > #contact-form > .btn {
+        float: left !important;
+    }
 }
 
 @media screen and (max-width: 768px) {
