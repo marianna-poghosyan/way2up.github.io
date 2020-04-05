@@ -358,6 +358,8 @@ jQuery(function ($) {
             // Called after the entrance animation is executed.
         }
     });
+    
+    
 
     /*==============================================================
                 Owl Carousel
@@ -656,27 +658,84 @@ jQuery(function ($) {
 		 Mail Sender
    ==============================================================*/
 
-$("#contact-form").on("submit", function (e) {
+   $("#contact-form-submit").click(function (e) {
     e.preventDefault();
-    var data = {
-        name: $("#name").val(),
-        email: $("#email").val(),
-        text: $("#text").val()
-    };
-    $.ajax({
-        type:"post",
-        url:"mail.php",
-        data: data,
-        success: function(res) {
-            if (res == true) {
-                $("#contact-form")[0].reset()
-                $('#email').val('Thank you!');
-            } else {
-                alert('Sorry, please try again');
+    var name = $.trim($('#name').val());
+    var email = $.trim($('#email').val());
+    var text = $.trim($('#text').val());
+
+    // Filter special characters in Name Input
+    function preventNameXss (str) {
+        return str.replace(/[^a-zA-Z0-9]/g, '');
+    }
+
+    // Filter special characters in text area
+    function preventTextAreaXss (str) {
+        return str.replace(/[#%&*~^]/g, '');
+    }
+
+    // Validate Email
+    function emailIsValid (emailValue) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+    }
+
+    // Create div alert with specific argument
+    // First arguments see https://getbootstrap.com/docs/3.3/components/#alerts  (alert-['success', 'info', 'warning', 'dangr'])
+    // Second argument -  Element name where to place toast
+    // Third argument - Text to show
+    function alertToastCreate (status, parentElement, text) {
+        $('.contact-form-popup').remove();
+        jQuery('<div/>', {
+            "class": `contact-form-popup alert alert-${status}`,
+            text: `${text}`,
+            on: {
+                click: function( event ) {
+                    $( this ).animate({
+                        opacity: 0
+                    }, 1000, function () {
+                        this.remove();
+                    });
+                },
+                touchstart: function( event ) {
+                    $( this ).animate({
+                        opacity: 0
+                    }, 1000, function () {
+                        this.remove();
+                    });
+                }
             }
-        },
-        error: function (err) {
-            alert('Sorry, please try again');
-        }
-    });
+        }).appendTo(parentElement);
+    }
+
+    if (preventNameXss(name) === '') {
+        alertToastCreate('danger', '.contact-form', 'Name must not be empty');
+    } else if (!emailIsValid(email) && email !== '') {
+        alertToastCreate('danger', '.contact-form', 'Please type correct syntax of email.Example Ed.Snowden@protonmail.com');
+    } else if (!emailIsValid(email) && email === '') {
+        alertToastCreate('danger', '.contact-form', 'Please type correct syntax of email. Example Ed.Snowden@protonmail.com');
+    } else if(text === '') {
+        alertToastCreate('danger', '.contact-form', 'Please fill text description');
+    } else if (name !== '' && preventTextAreaXss(text) !== '' && emailIsValid(email)) { 
+        $('.contact-form-popup').remove();
+        $.ajax({
+            type:"post",
+            url:"mail.php",
+            data: {
+                name: preventNameXss(name),
+                email: email,
+                text: preventTextAreaXss(text),
+            },
+            success: function(res) {
+                if (res == true) {
+                    $("#contact-form")[0].reset();
+                    alertToastCreate ('success', '.contact-form', 'Thank you, we shall get in touch with you, soon');
+                } else {
+                    alertToastCreate ('warning', '.contact-form', 'Sorry, please try again');
+                }
+            },
+            error: function (err) {
+                alertToastCreate ('danger', '.contact-form', 'Sorry, please try again')
+            }
+        });
+    }
 })
