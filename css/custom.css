@@ -360,6 +360,10 @@ button {
     .contact-page-form .contact-form > #contact-form > .btn {
         float: none !important;
     }
+
+    .safe-area #contact-form {
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 768px) {
