@@ -658,7 +658,7 @@ jQuery(function ($) {
 		 Mail Sender
    ==============================================================*/
 
-   $("#contact-form-submit").click(function (e) {
+   $(".contact-form-submit").click(function (e) {
     e.preventDefault();
     var name = $.trim($('#name').val());
     var email = $.trim($('#email').val());
