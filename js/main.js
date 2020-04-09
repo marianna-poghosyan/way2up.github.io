@@ -17,12 +17,6 @@ $(window).on('load', function () {
         }, 500);
     });
 
-    // // Fix for Safari and IOS block mechanism for Maps
-    // var contact = '/contact';
-    // if(window.location.pathname === contact) {
-    //     location.reload();
-    // }
-
     /* ===================================
      Loading Timeout
      ====================================== */
