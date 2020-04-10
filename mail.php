@@ -4,7 +4,7 @@ if(isset($_POST['email'])){
     $name = $_POST['name'];
     $email = $_POST['email'];
     $text = $_POST['text'];
-    $to = "way2up.armenia@gmail.com";
+    $to = "contact@way2up.am";
     $subject = 'Way2Up message';
     $headers = 'From:info@way2up.am'. "\r\n" .
                'Reply-To:info@way2up.am'. "\r\n" .
