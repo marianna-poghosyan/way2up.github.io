@@ -4,11 +4,11 @@ if(isset($_POST['email'])){
     $name = $_POST['name'];
     $email = $_POST['email'];
     $text = $_POST['text'];
-    $to = "contact@way2up.am";
+    $to = "way2up.armenia@gmail.com";
     $subject = 'Way2Up message';
     $headers = 'From:info@way2up.am'. "\r\n" .
-               'Reply-To:info@way2up.am'. "\r\n" .
-               'X-Mailer: PHP/' . phpversion();
+                'Reply-To:info@way2up.am'. "\r\n" .
+                'X-Mailer: PHP/' . phpversion();
 
     $body = <<<EMAIL
 
