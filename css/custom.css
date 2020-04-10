@@ -350,10 +350,6 @@ button {
     margin-top: 20px;
 }
 
-.parallax {
-    background-attachment: fixed !important;
-}
-
 @media (max-width: 1024px){
     .navbar-fixed-top {
         top: calc(100% - 54px);
