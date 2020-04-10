@@ -1,5 +1,4 @@
 jQuery(function(e) {
-	"use strict";
 	google.maps.event.addDomListener(window, "load", function() {
 		var e, l, t = {
 				zoom: 15,
