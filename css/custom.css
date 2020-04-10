@@ -350,9 +350,9 @@ button {
     margin-top: 20px;
 }
 
-.parallax {
+/* .parallax {
     background-attachment:scroll;
-}
+} */
 
 @media (max-width: 1024px){
     .navbar-fixed-top {
