@@ -6,8 +6,8 @@ if(isset($_POST['email'])){
     $text = $_POST['text'];
     $to = "contact@way2up.am";
     $subject = 'Way2Up message';
-    $headers = 'From:info@way2up.am'. "\r\n" .
-               'Reply-To:info@way2up.am'. "\r\n" .
+    $headers = 'From:contact@way2up.am'. "\r\n" .
+               'Reply-To:contact@way2up.am'. "\r\n" .
                'X-Mailer: PHP/' . phpversion();
 
     $body = <<<EMAIL
