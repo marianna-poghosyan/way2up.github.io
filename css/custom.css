@@ -349,7 +349,16 @@ button {
     width: 100%;
     margin-top: 20px;
 }
+@media screen and (max-width: 1199px) {
+    #services .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
 
+    #services .col-md-6 {
+        margin-top: 30px;
+    } 
+}
 @media (max-width: 1024px){
     .navbar-fixed-top {
         top: calc(100% - 54px);
