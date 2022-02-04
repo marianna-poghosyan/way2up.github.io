@@ -9,13 +9,13 @@ $(window).on('load', function () {
     var year = new Date().getFullYear();
     $(".year").text(year);
     // open page scrolled up to bottom
-    $('html, body').animate({
-        scrollTop: $(document).height()
-    }, 1, function() {
-        setTimeout(function () {
-            $("#loader").fadeOut("slow");
-        }, 500);
-    });
+    // $('html, body').animate({
+    //     scrollTop: $(document).height()
+    // }, 1, function() {
+    //     setTimeout(function () {
+    //         $("#loader").fadeOut("slow");
+    //     }, 500);
+    // });
 
     /* ===================================
      Loading Timeout
